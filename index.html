@@ -1,21 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Archit Borkar's Pocket Universe</title>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Archit Borkar | Pocket Universe</title>
   <style>
     body {
-      font-family: sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      background-color: #111;
-      color: #eee;
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(circle at center, #0a0a0a, #000);
+      color: #00f7ff;
     }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+      border-bottom: 1px solid #0ff;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      color: #aaa;
+      font-size: 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .tile {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      border: 1px solid #00f7ff33;
+      border-radius: 10px;
+      padding: 1.5rem;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .tile:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px #00f7ff99;
+    }
+
+    .tile h2 {
+      font-size: 1.2rem;
+      margin: 0;
+      color: #00f7ff;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
   </style>
 </head>
 <body>
-  <h1>Welcome to Archit Borkar's Pocket Universe</h1>
+  <header>
+    <h1>Archit Borkar's Pocket Universe</h1>
+    <p>Explorations in design, electronics, programming & digital manufacturing</p>
+  </header>
+
+  <div class="grid">
+    <div class="tile"><h2>PiBook ~Archit</h2></div>
+    <div class="tile"><h2>Escape Reality</h2></div>
+    <div class="tile"><h2>3D Printable VR goggles</h2></div>
+    <div class="tile"><h2>O Watch</h2></div>
+    <div class="tile"><h2>Personal Finance Manager</h2></div>
+    <div class="tile"><h2>3D Production Plant Manager</h2></div>
+    <div class="tile"><h2>Time Tabler</h2></div>
+    <div class="tile"><h2>Vapourizing chamber for ABS and PVB 3D prints</h2></div>
+    <div class="tile"><h2>Open source DIY MDF CNC machine</h2></div>
+    <div class="tile"><h2>Open source multi colored 3D Printer</h2></div>
+    <div class="tile"><h2>Open source PETG filament maker</h2></div>
+  </div>
 </body>
 </html>
