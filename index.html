@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Archit Borkar | Pocket Universe</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
     body {
       margin: 0;
       font-family: 'Orbitron', sans-serif;
@@ -30,13 +32,102 @@
       font-size: 1rem;
     }
 
+    section {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #0ff;
+      border-bottom: 1px solid #0ff4;
+      padding-bottom: 0.5rem;
+    }
+
+    .image-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+
+    .image-tile {
+      flex: 0 0 48%;
+      max-width: 48%;
+      background: #111;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #00f7ff33;
+      box-shadow: 0 0 10px #00f7ff11;
+      transition: transform 0.3s ease;
+    }
+
+    .image-tile:hover {
+      transform: scale(1.02);
+    }
+
+    .image-tile img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    .image-tile p {
+      text-align: center;
+      margin: 0.8rem;
+      color: #0ff;
+      font-size: 1rem;
+    }
+
+    /* Quick builds: make images uniform size and cropped */
+    .scroll-container {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      padding-bottom: 1rem;
+      scroll-snap-type: x mandatory;
+    }
+
+    .scroll-container::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .scroll-container::-webkit-scrollbar-thumb {
+      background: #0ff6;
+      border-radius: 10px;
+    }
+
+    .scroll-container .image-tile {
+      flex: 0 0 240px;
+      scroll-snap-align: start;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #111;
+      border: 1px solid #00f7ff33;
+      box-shadow: 0 0 10px #00f7ff11;
+      transition: transform 0.3s ease;
+    }
+
+    .scroll-container .image-tile:hover {
+      transform: scale(1.02);
+    }
+
+    /* Updated here for uniform size and cropped images */
+    .scroll-container .image-tile img {
+      width: 100%;
+      height: 160px;          /* fixed height */
+      object-fit: cover;      /* crop image to fill */
+      display: block;
+    }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 1.5rem;
-      padding: 2rem;
-      max-width: 1200px;
-      margin: auto;
+      margin-top: 1rem;
     }
 
     .tile {
@@ -54,13 +145,24 @@
       box-shadow: 0 0 15px #00f7ff99;
     }
 
-    .tile h2 {
-      font-size: 1.2rem;
+    .tile h3 {
+      font-size: 1.1rem;
       margin: 0;
       color: #00f7ff;
     }
 
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      border-top: 1px solid #0ff4;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    a {
+      color: #0ff;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
@@ -69,18 +171,56 @@
     <p>Explorations in design, electronics, programming & digital manufacturing</p>
   </header>
 
-  <div class="grid">
-    <div class="tile"><h2>PiBook ~Archit</h2></div>
-    <div class="tile"><h2>Escape Reality</h2></div>
-    <div class="tile"><h2>3D Printable VR goggles</h2></div>
-    <div class="tile"><h2>O Watch</h2></div>
-    <div class="tile"><h2>Personal Finance Manager</h2></div>
-    <div class="tile"><h2>3D Production Plant Manager</h2></div>
-    <div class="tile"><h2>Time Tabler</h2></div>
-    <div class="tile"><h2>Vapourizing chamber for ABS and PVB 3D prints</h2></div>
-    <div class="tile"><h2>Open source DIY MDF CNC machine</h2></div>
-    <div class="tile"><h2>Open source multi colored 3D Printer</h2></div>
-    <div class="tile"><h2>Open source PETG filament maker</h2></div>
-  </div>
+  <section>
+    <h2>Currently working on</h2>
+    <div class="image-grid">
+      <div class="image-tile">
+        <img src="https://i.ytimg.com/vi/1yIe1Pp_Nrg/maxresdefault.jpg" alt="Open-source PETG Recycle Filament Extruder">
+        <p>Open-source PETG Recycle Filament Extruder</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Quick builds</h2>
+    <div class="scroll-container">
+      <div class="image-tile">
+        <img src="https://www.morntech.com/wp-content/uploads/2019/10/laser-cut-lamp-26.jpg" alt="Laser Cut Lamps">
+        <p>Laser-cut Lamps</p>
+      </div>
+      <div class="image-tile">
+        <img src="https://static.beebom.com/wp-content/uploads/2023/08/External-Monitor-Brightness.jpg?w=750&quality=75" alt="Monitor Screen Brightness Control">
+        <p>Monitor Screen Brightness Control</p>
+      </div>
+      <div class="image-tile">
+        <img src="https://blog.prusa3d.com/wp-content/uploads/2019/07/P1522760.jpg" alt="DIY Filament Dryer">
+        <p>DIY Filament Dryer</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>My projects</h2>
+    <div class="grid">
+      <div class="tile"><h3>PiBook ~Archit</h3></div>
+      <div class="tile"><h3>Escape Reality</h3></div>
+      <div class="tile"><h3>3D Printable VR goggles</h3></div>
+      <div class="tile"><h3>O Watch</h3></div>
+      <div class="tile"><h3>Personal Finance Manager</h3></div>
+      <div class="tile"><h3>3D Production Plant Manager</h3></div>
+      <div class="tile"><h3>Time Tabler</h3></div>
+      <div class="tile"><h3>Vapourizing chamber for ABS and PVB 3D prints</h3></div>
+      <div class="tile"><h3>Open source DIY MDF CNC machine</h3></div>
+      <div class="tile"><h3>Open source multi colored 3D Printer</h3></div>
+      <div class="tile"><h3>Open source PETG filament maker</h3></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Email: <a href="mailto:architborkar9@gmail.com">architborkar9@gmail.com</a></p>
+    <p>Ph.: <a href="tel:+918380995611">8380995611</a></p>
+    <p>Location: Goa, India</p>
+  </footer>
 </body>
 </html>
+
