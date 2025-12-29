@@ -1,0 +1,12 @@
+title: Archit Borkar | Pocket Universe
+description: Personal innovation archive
+url: https://architborkar.github.io
+baseurl: ""
+
+markdown: kramdown
+theme: null
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
