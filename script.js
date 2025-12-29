@@ -1,46 +1,44 @@
-const projectsFolder = ["PiBook", "MDF CNC"]; // List your project folders here
+const projectsFolder = ["PiBook", "MDF CNC"];
 
-// Home View
+// ---------- HOME ----------
 async function loadHome() {
-  document.getElementById('home-view').style.display = 'block';
-  document.getElementById('project-view').style.display = 'none';
-  document.getElementById('version-view').style.display = 'none';
+  showView("home");
 
-  const list = document.getElementById('project-list');
-  list.innerHTML = '';
+  const list = document.getElementById("project-list");
+  list.innerHTML = "";
 
-  for (let p of projectsFolder) {
-    const meta = await fetch(`projects/${p}/metadata.json`).then(r => r.json());
-    const card = document.createElement('div');
-    card.className = 'card';
+  for (const project of projectsFolder) {
+    const meta = await fetch(`projects/${project}/metadata.json`).then(r => r.json());
+
+    const card = document.createElement("div");
+    card.className = "card";
     card.innerHTML = `
-      <img src="projects/${p}/${meta.thumbnail}" alt="${meta.name}">
+      <img src="projects/${project}/${meta.thumbnail}">
       <h3>${meta.name}</h3>
       <p>${meta.description}</p>
     `;
-    card.onclick = () => loadProject(p);
+
+    card.onclick = () => loadProject(project);
     list.appendChild(card);
   }
 }
 
-// Project View
+// ---------- PROJECT ----------
 async function loadProject(project) {
-  document.getElementById('home-view').style.display = 'none';
-  document.getElementById('project-view').style.display = 'block';
-  document.getElementById('version-view').style.display = 'none';
+  showView("project");
 
   const meta = await fetch(`projects/${project}/metadata.json`).then(r => r.json());
-  document.getElementById('project-title').textContent = meta.name;
-  document.getElementById('project-desc').textContent = meta.description;
+  document.getElementById("project-title").textContent = meta.name;
+  document.getElementById("project-desc").textContent = meta.description;
 
-  const list = document.getElementById('version-list');
-  list.innerHTML = '';
+  const list = document.getElementById("version-list");
+  list.innerHTML = "";
 
   meta.versions.forEach(v => {
-    const card = document.createElement('div');
-    card.className = 'card';
+    const card = document.createElement("div");
+    card.className = "card";
     card.innerHTML = `
-      <img src="projects/${project}/${v.files.images[0]}" alt="${v.title}">
+      <img src="projects/${project}/${v.id}/${v.files.images[0]}">
       <h4>${v.title}</h4>
       <p>${v.description}</p>
     `;
@@ -48,61 +46,69 @@ async function loadProject(project) {
     list.appendChild(card);
   });
 
-  document.getElementById('back-to-home').onclick = loadHome;
+  document.getElementById("back-to-home").onclick = loadHome;
 }
 
-// Version View
+// ---------- VERSION ----------
 async function loadVersion(project, versionId) {
-  document.getElementById('home-view').style.display = 'none';
-  document.getElementById('project-view').style.display = 'none';
-  document.getElementById('version-view').style.display = 'block';
+  showView("version");
 
   const meta = await fetch(`projects/${project}/metadata.json`).then(r => r.json());
   const version = meta.versions.find(v => v.id === versionId);
 
-  document.getElementById('version-title').textContent = `${meta.name} - ${version.title}`;
-  document.getElementById('version-desc').textContent = version.description;
+  document.getElementById("version-title").textContent =
+    `${meta.name} – ${version.title}`;
+  document.getElementById("version-desc").textContent =
+    version.description;
 
-  const content = document.getElementById('version-content');
-  content.innerHTML = '';
+  const content = document.getElementById("version-content");
+  content.innerHTML = "";
 
   // Images
   version.files.images.forEach(img => {
-    const i = document.createElement('img');
-    i.src = `projects/${project}/${version.id}/${img}`;
+    const i = document.createElement("img");
+    i.src = `projects/${project}/${versionId}/${img}`;
     content.appendChild(i);
   });
 
   // Videos
-  version.files.videos.forEach(vid => {
-    const v = document.createElement('video');
-    v.src = `projects/${project}/${version.id}/${vid}`;
+  version.files.videos.forEach(video => {
+    const v = document.createElement("video");
+    v.src = `projects/${project}/${versionId}/${video}`;
     v.controls = true;
     content.appendChild(v);
   });
 
-  // README content inline
+  // README
   if (version.files.docs) {
-    const docContainer = document.createElement('div');
-    docContainer.className = 'readme';
-    content.appendChild(docContainer);
+    const doc = document.createElement("div");
+    doc.className = "readme";
+    doc.innerHTML = "<p>Loading documentation…</p>";
+    content.appendChild(doc);
 
-    fetch(`projects/${project}/${version.id}/${version.files.docs}`)
-      .then(r => r.text())
-      .then(text => {
-        let html = text
-          .replace(/^### (.*$)/gim, '<h3>$1</h3>')
-          .replace(/^## (.*$)/gim, '<h2>$1</h2>')
-          .replace(/^# (.*$)/gim, '<h1>$1</h1>')
-          .replace(/\*\*(.*)\*\*/gim, '<b>$1</b>')
-          .replace(/\*(.*)\*/gim, '<i>$1</i>')
-          .replace(/\n/g, '<br>');
-        docContainer.innerHTML = html;
+    fetch(`projects/${project}/${versionId}/${version.files.docs}`)
+      .then(r => r.ok ? r.text() : Promise.reject())
+      .then(md => {
+        doc.innerHTML = marked.parse(md);
+      })
+      .catch(() => {
+        doc.innerHTML = "<p>No documentation available.</p>";
       });
   }
 
-  document.getElementById('back-to-project').onclick = () => loadProject(project);
+  document.getElementById("back-to-project").onclick =
+    () => loadProject(project);
 }
 
-// Initial load
+// ---------- VIEW SWITCH ----------
+function showView(view) {
+  document.getElementById("home-view").style.display =
+    view === "home" ? "block" : "none";
+  document.getElementById("project-view").style.display =
+    view === "project" ? "block" : "none";
+  document.getElementById("version-view").style.display =
+    view === "version" ? "block" : "none";
+}
+
+// ---------- START ----------
 loadHome();
