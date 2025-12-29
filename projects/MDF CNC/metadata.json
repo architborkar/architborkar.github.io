@@ -10,7 +10,7 @@
       "files": {
         "images": ["images/cover.png", "images/screenshot1.png"],
         "videos": ["videos/demo.mp4"],
-        "docs": "README.md"
+        "docs": "readme.md"
       }
     },
     {
@@ -20,7 +20,7 @@
       "files": {
         "images": ["images/cover.png", "images/screenshot2.png"],
         "videos": ["videos/demo2.mp4"],
-        "docs": "README.md"
+        "docs": "readme.md"
       }
     }
   ]
