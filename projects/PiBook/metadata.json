@@ -1,0 +1,27 @@
+{
+  "name": "PiBook",
+  "description": "A demo project for PiBook",
+  "thumbnail": "v1/images/cover.png",
+  "versions": [
+    {
+      "id": "v1",
+      "title": "Version 1",
+      "description": "Initial release",
+      "files": {
+        "images": ["images/cover.png", "images/screenshot1.png"],
+        "videos": ["videos/demo.mp4"],
+        "docs": "README.md"
+      }
+    },
+    {
+      "id": "v2",
+      "title": "Version 2",
+      "description": "Updated with new features",
+      "files": {
+        "images": ["images/cover.png", "images/screenshot2.png"],
+        "videos": ["videos/demo2.mp4"],
+        "docs": "README.md"
+      }
+    }
+  ]
+}

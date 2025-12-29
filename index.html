@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Archit's Pocket Universe</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Archit's Pocket Universe</h1>
+  <p>Explorations in design, manufacturing, electronics, programming, virtual reality and more.</p>
+</header>
+
+<main>
+  <!-- Home view: Projects -->
+  <div id="home-view">
+    <h2>Projects</h2>
+    <div id="project-list" class="grid"></div>
+  </div>
+
+  <!-- Project view: Versions -->
+  <div id="project-view" style="display:none;">
+    <button id="back-to-home" class="back-btn">⬅ Back to Projects</button>
+    <h2 id="project-title"></h2>
+    <p id="project-desc"></p>
+    <div id="version-list" class="grid"></div>
+  </div>
+
+  <!-- Version view: Images/Videos/README -->
+  <div id="version-view" style="display:none;">
+    <button id="back-to-project" class="back-btn">⬅ Back to Project</button>
+    <h2 id="version-title"></h2>
+    <p id="version-desc"></p>
+    <div id="version-content" class="version-content"></div>
+  </div>
+</main>
+
+<footer>
+  <p>Goa, India | <a href="mailto:architborkar9@gmail.com">architborkar9@gmail.com</a></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
