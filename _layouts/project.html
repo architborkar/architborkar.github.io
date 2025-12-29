@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+</head>
+
+<body style="background:#000;color:#0ff;font-family:Orbitron;padding:2rem">
+
+<a href="/">← Back</a>
+
+<h1>{{ page.title }}</h1>
+
+<p>
+  <strong>Status:</strong> {{ page.status }} <br>
+  <strong>Domain:</strong> {{ page.domain }} <br>
+  <strong>Started:</strong> {{ page.started }}
+</p>
+
+<hr>
+
+{{ content }}
+
+</body>
+</html>
