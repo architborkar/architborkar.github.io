@@ -1,47 +1,83 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Archit's Pocket Universe</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Archit's Pocket Universe</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
 </head>
 <body>
 
-<header>
-  <h1>Archit's Pocket Universe</h1>
-  <p>Explorations in design, manufacturing, electronics, programming, virtual reality and more.</p>
-</header>
+  <header class="hero">
+    <h1>Archit's Pocket Universe</h1>
+    <p>
+      Explorations in design, manufacturing, electronics, programming,
+      prototyping and engineering.
+    </p>
 
-<main>
-  <!-- Home view: Projects -->
-  <div id="home-view">
-    <h2>Projects</h2>
-    <div id="project-list" class="grid"></div>
-  </div>
+    <div class="nav-links">
+      <button id="home-btn" class="nav-btn active">PROJECTS</button>
+    </div>
+  </header>
 
-  <!-- Project view: Versions -->
-  <div id="project-view" style="display:none;">
-    <button id="back-to-home" class="back-btn">⬅ Back to Projects</button>
-    <h2 id="project-title"></h2>
-    <p id="project-desc"></p>
-    <div id="version-list" class="grid"></div>
-  </div>
+  <main>
 
-  <!-- Version view: Images/Videos/README -->
-  <div id="version-view" style="display:none;">
-    <button id="back-to-project" class="back-btn">⬅ Back to Project</button>
-    <h2 id="version-title"></h2>
-    <p id="version-desc"></p>
-    <div id="version-content" class="version-content"></div>
-  </div>
-</main>
+    <!-- HOME -->
+    <section id="home-view" class="view">
+      <h2>Active Projects</h2>
+      
+      <div id="filter-bar" class="filter-bar">
+        <button class="filter-btn active" data-filter="ALL">
+          ALL
+        </button>
+      </div>
 
-<footer>
-  <p>Goa, India | <a href="mailto:architborkar9@gmail.com">architborkar9@gmail.com</a></p>
-</footer>
+      <div id="project-list" class="grid"></div>
+    </section>
 
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-<script src="script.js"></script>
+    <!-- PROJECT -->
+    <section id="project-view" class="view hidden">
+      <button id="back-to-home" class="back-btn">
+        ← Back to Projects
+      </button>
+
+      <h2 id="project-title"></h2>
+      <p id="project-desc" class="section-desc"></p>
+
+      <div id="version-list" class="grid"></div>
+    </section>
+
+    <!-- VERSION -->
+    <section id="version-view" class="view hidden">
+      <button id="back-to-project" class="back-btn">
+        ← Back to Project
+      </button>
+
+      <h2 id="version-title"></h2>
+      <p id="version-desc" class="section-desc"></p>
+
+      <div id="version-content" class="version-content"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      Goa, India |
+      <a href="mailto:architborkar9@gmail.com">
+        architborkar9@gmail.com
+      </a>
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,25 +1,60 @@
 {
   "name": "PiBook",
-  "description": "A demo project for PiBook",
+
+  "description": "Portable Raspberry Pi based mini-computer and kiosk productivity dashboard system.",
+
   "thumbnail": "v1/images/cover.jpg",
+
+  "status": "RECONFIGURING",
+
+  "priority": "MEDIUM",
+
+  "tags": [
+    "Hardware",
+    "Software",
+    "RaspberryPi",
+    "Productivity"
+  ],
+
   "versions": [
     {
       "id": "v1",
+
       "title": "Version 1",
-      "description": "Initial release",
+
+      "description": "Initial portable Raspberry Pi laptop prototype.",
+
       "files": {
-        "images": ["images/cover.jpg", "images/screenshot1.jpg"],
-        "videos": ["videos/demo.mp4"],
+        "images": [
+          "images/cover.jpg",
+          "images/screenshot1.jpg"
+        ],
+
+        "videos": [
+          "videos/demo.mp4"
+        ],
+
         "docs": "README.md"
       }
     },
+
     {
       "id": "v2",
+
       "title": "Version 2",
-      "description": "Updated with new features",
+
+      "description": "Updated kiosk dashboard concept and refined hardware architecture.",
+
       "files": {
-        "images": ["images/cover.jpg", "images/screenshot2.jpg"],
-        "videos": ["videos/demo2.mp4"],
+        "images": [
+          "images/cover.jpg",
+          "images/screenshot2.jpg"
+        ],
+
+        "videos": [
+          "videos/demo2.mp4"
+        ],
+
         "docs": "README.md"
       }
     }

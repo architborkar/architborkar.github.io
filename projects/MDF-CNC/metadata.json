@@ -1,0 +1,62 @@
+{
+  "name": "MDF CNC",
+
+  "description": "Custom-built desktop CNC platform for MDF, wood and precision prototyping workflows.",
+
+  "thumbnail": "v1/images/cover.png",
+
+  "status": "ACTIVE",
+
+  "priority": "HIGH",
+
+  "tags": [
+    "Manufacturing",
+    "Hardware",
+    "CNC",
+    "Electronics"
+  ],
+
+  "versions": [
+    {
+      "id": "v1",
+
+      "title": "Version 1",
+
+      "description": "Initial CNC platform prototype and motion system calibration.",
+
+      "files": {
+        "images": [
+          "images/cover.png",
+          "images/screenshot1.png"
+        ],
+
+        "videos": [
+          "videos/demo.mp4"
+        ],
+
+        "docs": "README.md"
+      }
+    },
+
+    {
+      "id": "v2",
+
+      "title": "Version 2",
+
+      "description": "Updated frame rigidity, spindle optimization and improved mechanics.",
+
+      "files": {
+        "images": [
+          "images/cover.png",
+          "images/screenshot2.png"
+        ],
+
+        "videos": [
+          "videos/demo2.mp4"
+        ],
+
+        "docs": "README.md"
+      }
+    }
+  ]
+}

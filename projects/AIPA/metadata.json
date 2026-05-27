@@ -1,0 +1,39 @@
+{
+  "name": "AIPA",
+
+  "description": "AI powered personal assistant system focused on productivity, planning and life management.",
+
+  "thumbnail": "v1/images/cover.png",
+
+  "status": "ACTIVE",
+
+  "priority": "HIGH",
+
+  "tags": [
+    "AI",
+    "Software",
+    "Productivity"
+  ],
+
+  "versions": [
+    {
+      "id": "v1",
+
+      "title": "Version 1",
+
+      "description": "Initial release and conversational AI workflow prototype.",
+
+      "files": {
+        "images": [
+          "images/cover.png"
+        ],
+
+        "videos": [
+          "videos/demo.mp4"
+        ],
+
+        "docs": "README.md"
+      }
+    }
+  ]
+}
