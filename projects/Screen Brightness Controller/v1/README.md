@@ -1,0 +1,1 @@
+A lightweight hardware-software utility designed to control brightness levels on displays that lack native brightness adjustment support, including external monitors and Raspberry Pi-based screens.

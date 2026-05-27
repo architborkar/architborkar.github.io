@@ -1,0 +1,43 @@
+{
+  "name": "O Watch",
+
+  "description": "A Raspberry Pi/Arduino-based experimental smartwatch platform designed around utility and productivity rather than fitness tracking.",
+
+  "thumbnail": "v1/images/cover.jpg",
+
+  "status": "UPCOMING",
+
+  "priority": "LOW",
+
+  "tags": [
+    "Software",
+    "Hardware",
+    "Electronics",
+    "Manufacturing",
+    "Programming",
+    "Productivity"
+  ],
+
+  "versions": [
+    {
+      "id": "v1",
+
+      "title": "Version 1",
+
+      "description": "Initial Prototype",
+
+      "files": {
+        "images": [
+          "images/cover.jpg",
+          "images/screenshot1.jpg"
+        ],
+
+        "videos": [
+          "videos/demo.mp4"
+        ],
+
+        "docs": "README.md"
+      }
+    }
+  ]
+}

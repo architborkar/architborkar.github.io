@@ -1,12 +1,12 @@
 Raspberry Pi 4B Monitor-Mounted Kiosk Dashboard
 
 1. Project Overview
-This project is a compact, monitor-mounted smart display powered by a Raspberry Pi 4B. It acts as a dedicated kiosk dashboard that provides real-time information such as:
-News updates
-Calendar events
-Stock market data
-Custom widgets / dashboards
-The system is designed to sit neatly on top of a primary monitor, offering at-a-glance information without interrupting the main workflow.
+\nThis project is a compact, monitor-mounted smart display powered by a Raspberry Pi 4B. It acts as a dedicated kiosk dashboard that provides real-time information such as:
+\nNews updates
+\nCalendar events
+\nStock market data
+\nCustom widgets / dashboards
+\nThe system is designed to sit neatly on top of a primary monitor, offering at-a-glance information without interrupting the main workflow.
 
 2. Purpose
 The primary goals of this project are:

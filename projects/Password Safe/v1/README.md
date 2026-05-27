@@ -1,0 +1,1 @@
+A fully local-first Android password manager that uses a custom Sanskrit-inspired encoding and encryption mechanism for secure credential storage. Access and decryption are driven through a unique user-generated golden key architecture, ensuring privacy without reliance on cloud synchronization.

@@ -1,0 +1,1 @@
+An open-source DIY PETG filament extrusion system intended for low-cost filament recycling and manufacturing. The project focuses on accessibility, modularity, and sustainable desktop-scale filament production.

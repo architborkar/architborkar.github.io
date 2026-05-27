@@ -1,0 +1,39 @@
+{
+  "name": "Password Safe",
+
+  "description": "A fully local-first Android password manager that uses a custom Sanskrit-inspired encoding and encryption mechanism for secure credential storage.",
+
+  "thumbnail": "v1/images/cover.jpg",
+
+  "status": "UPCOMING",
+
+  "priority": "LOW",
+
+  "tags": [
+    "Software",
+    "Productivity"
+  ],
+
+  "versions": [
+    {
+      "id": "v1",
+
+      "title": "Version 1",
+
+      "description": "Initial Prototype",
+
+      "files": {
+        "images": [
+          "images/cover.jpg",
+          "images/screenshot1.jpg"
+        ],
+
+        "videos": [
+          "videos/demo.mp4"
+        ],
+
+        "docs": "README.md"
+      }
+    }
+  ]
+}

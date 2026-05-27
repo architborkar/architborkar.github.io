@@ -1,0 +1,1 @@
+A Raspberry Pi/Arduino-based experimental smartwatch platform designed around utility and productivity rather than fitness tracking. Features include navigation, reminders, quick note-taking, communication integration, and modular extensibility for custom workflows.

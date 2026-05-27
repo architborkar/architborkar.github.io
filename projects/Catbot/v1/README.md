@@ -1,0 +1,1 @@
+An AI-driven robotic companion designed to realistically emulate the behavior, personality, and interaction patterns of a real cat. The project explores emotional robotics, autonomous behavior systems, and adaptive AI-driven interaction models.

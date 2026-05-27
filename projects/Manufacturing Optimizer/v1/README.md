@@ -1,0 +1,1 @@
+An industrial operations optimization platform focused on manufacturing, supply chain, logistics, and production planning problems. The system combines structured data input, constraint-solving algorithms, and analytical output visualization to improve operational efficiency and decision-making.

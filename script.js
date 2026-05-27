@@ -4,8 +4,6 @@ let projectsFolder = [];
 let allProjectsMeta = [];
 let currentFilter = "ALL";
 
-const homeBtn = document.getElementById("home-btn");
-
 // ---------- ELEMENTS ----------
 const homeView = document.getElementById("home-view");
 const projectView = document.getElementById("project-view");
@@ -22,9 +20,6 @@ const versionTitle = document.getElementById("version-title");
 const versionDesc = document.getElementById("version-desc");
 
 const filterBar = document.getElementById("filter-bar");
-
-// ---------- NAV ----------
-document.getElementById("home-btn").addEventListener("click", loadHome);
 
 document
   .getElementById("back-to-home")

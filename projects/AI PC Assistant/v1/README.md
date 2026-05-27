@@ -1,0 +1,1 @@
+An autonomous AI desktop assistant capable of visually understanding a computer screen and performing user-interface interactions such as clicking, typing, testing, and iterative task execution. The system aims to automate practical computer workflows including coding, testing, and repetitive operational tasks.

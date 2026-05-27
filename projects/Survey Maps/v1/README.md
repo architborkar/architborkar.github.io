@@ -1,0 +1,1 @@
+A geospatial land-visualization platform that overlays government survey plans and cadastral maps onto GPS-based map systems such as Google Maps. The system enables intuitive search and visualization of land ownership data by village, taluka, surname, owner name, and survey number through an interactive database-driven interface.

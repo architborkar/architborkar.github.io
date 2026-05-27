@@ -1,0 +1,40 @@
+{
+  "name": "Manufacturing Optimizer",
+
+  "description": "An industrial operations optimization platform focused on manufacturing, supply chain, logistics, and production planning problems.",
+
+  "thumbnail": "v1/images/cover.jpg",
+
+  "status": "UPCOMING",
+
+  "priority": "LOW",
+
+  "tags": [
+    "Software",
+    "Productivity",
+    "Manufacturing"
+  ],
+
+  "versions": [
+    {
+      "id": "v1",
+
+      "title": "Version 1",
+
+      "description": "Initial Prototype",
+
+      "files": {
+        "images": [
+          "images/cover.jpg",
+          "images/screenshot1.jpg"
+        ],
+
+        "videos": [
+          "videos/demo.mp4"
+        ],
+
+        "docs": "README.md"
+      }
+    }
+  ]
+}

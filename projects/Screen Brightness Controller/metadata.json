@@ -1,0 +1,38 @@
+{
+  "name": "Screen Brightness Controller",
+
+  "description": "A lightweight hardware-software utility designed to control brightness levels on displays that lack native brightness adjustment support, including external monitors and Raspberry Pi-based screens.",
+
+  "thumbnail": "v1/images/cover.jpg",
+
+  "status": "UPCOMING",
+
+  "priority": "LOW",
+
+  "tags": [
+    "Software"
+  ],
+
+  "versions": [
+    {
+      "id": "v1",
+
+      "title": "Version 1",
+
+      "description": "Initial Prototype",
+
+      "files": {
+        "images": [
+          "images/cover.jpg",
+          "images/screenshot1.jpg"
+        ],
+
+        "videos": [
+          "videos/demo.mp4"
+        ],
+
+        "docs": "README.md"
+      }
+    }
+  ]
+}
